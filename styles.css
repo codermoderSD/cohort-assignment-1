@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(135deg, #0e0d17, #060608);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  margin-bottom: 5rem;
+}
+
+.quote-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.quote-container::before {
+  content: "\201C";
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-family: serif;
+}
+
+.quote-container::after {
+  content: "\201D";
+  position: absolute;
+  bottom: -20px;
+  right: 20px;
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.1);
+  font-family: serif;
+}
+
+.quote-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 20px 0;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+#author {
+  font-size: 1rem;
+  font-style: italic;
+  color: rgb(182, 182, 182);
+  margin: 20px 0 0 0;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  gap: 8px;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.primary-btn {
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #fff;
+}
+
+.primary-btn:hover {
+  background: #314551;
+  color: #fff;
+}
+
+.twitter-btn {
+  background: #1da1f2;
+  color: white;
+  text-decoration: none;
+}
+
+.twitter-btn:hover {
+  background: #0c85d0;
+}
+
+.copy-btn {
+  background: #6f818d;
+  color: #ffffff;
+}
+
+.copy-btn:hover {
+  background: #62727c;
+}
+
+.icons {
+  height: 1.1rem;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #ffffff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .quote-container {
+    padding: 30px 20px;
+  }
+
+  .quote-text {
+    font-size: 1.25rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}

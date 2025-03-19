@@ -36,7 +36,7 @@ h1 {
 }
 
 .quote-container {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(55, 61, 64, 0.8);
   backdrop-filter: blur(10px);
   padding: 40px;
   border-radius: 12px;
@@ -117,6 +117,15 @@ h1 {
 
 .btn:active {
   transform: translateY(1px);
+}
+
+.export-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
 }
 
 .primary-btn {

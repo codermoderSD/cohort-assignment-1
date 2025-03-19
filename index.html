@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote of the Day</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </head>
 
 <body>
+    <button id="export" class="btn export-btn">Export as Image</button>
     <div class="container">
         <h1>Quote of the day</h1>
 
-        <div class="quote-container">
+        <div id="quote-container" class="quote-container">
             <div id="content" class="quote-text">Loading...</div>
             <p id="author"></p>
         </div>
